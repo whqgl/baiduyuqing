@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script>
+	$(function(){
+		var box=$('.box');
+		box.fullpage({
+			'navigation':true,
+			afterLoad:function(box,index){
+				$('.section').removeAttr('id');
+				$('.section').eq(index-1).attr('id','active');				
+			},	
+		})
+		$('.button').click(function(){
+				$.fn.fullpage.moveSectionDown();
+			})
+	})
+	</script>
+</head>
+<body>
+	<div class="title">
+		<div class="nav">
+			<div class="nav-left">
+			</div>
+			<div class="nav-zj">
+				<a href="">首页</a>
+				<a href="">产品介绍</a>
+				<a href="">用户版</a>
+			</div>
+			<div class="nav-right">
+				<a href="">手机客户端
+					<div class="sjxl">
+						<div class="jt iconfont">&#xe7ce;</div>
+						<h3>扫码下载</h3>
+						<ul>
+							<li><img src="imgs/4.png" alt=""><div class="pp">安卓</div></li>
+							<li><img src="imgs/5.png" alt=""><div class="pp">ios</div></li>
+						</ul>
+					</div>
+				</a>
+				<div class="hot"></div>
+				<a href="">百度司南</a>
+				<a href="">联系我们</a>
+				<a href="">申请试用</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="box">
+		<div class="section">			
+			<div class="inner">
+				<img src="imgs/cloud_1.png" alt="" class="cloud1">
+				<img src="imgs/cloud_2.png" alt="" class="cloud2">
+				<img src="imgs/cloud_3.png" alt="" class="cloud3">
+				<img src="imgs/ship.png" alt="" class="ship">
+			</div>
+			<div class="button"></div>
+			<div class="fj"></div>
+			<div class="bdyq">
+				<img src="imgs/launch.png" alt="">
+			</div>
+			<ul class="denglu">
+				<li class="iconfont yh">&#xe616;<input type="text" value="用户名"></li>
+				<li class="iconfont yh">&#xe78d;<input type="text" value="密码"></li>
+				<li><input type="text" value="验证码"><div class="yzm">8653</div><a href="">换一张</a></li>
+				<li><input type="button" value="登录"></li>
+				<li class="iconfont">&#xe61c;
+					<div class="aq">
+						<span>安全控件常见问题</span><span>忘记密码</span>
+					</div>
+				</li>
+			</ul>
+			<div class="haidi">
+				<img src="imgs/hill_1.png" alt="">
+				<img src="imgs/hill_2.png" alt="">
+				<img src="imgs/hill_3.png" alt="">	
+			</div>
+		</div>
+		<div class="section">
+			<div class="inner">
+				<div class="left">
+					<img src="imgs/h_lingxian.png" alt="">
+					<div class="left-h6">
+						<h6>数据收集与处理</h6>
+						<p>15年专业数据收集与语义分析技术积累卓越极致,不断攀登</p>
+					</div>				
+				</div>
+				<div class="right">
+					<img src="imgs/brain.png" alt="">
+				</div>	
+				<div class="in-box"></div>
+				<div class="in-box"></div>
+				<div class="in-box"></div>
+				<div class="in-box"></div>
+				<div class="in-box"></div>
+			</div>
+			<div class="button"></div>
+		</div>
+		<div class="section">
+			<div class="inner">
+				<div class="ln-box"></div>
+				<div class="ln-box"></div>
+				<div class="ln-box"></div>
+				<div class="ln-box"></div>
+				<div class="ln-box"></div>
+				<div class="left">
+					<img src="imgs/h_quanmian.png" alt="">
+					<div class="left-h6">
+						<h6>舆情分析逻辑与架构</h6>
+						<p>声量诊断、传播分析、情感提炼、受众画像有方法论,更有智慧</p>
+					</div>					
+				</div>
+				<div class="right">
+					<img src="imgs/allside.png" alt="">
+				</div>
+
+			</div>
+			<div class="button"></div>
+		</div>
+		<div class="section">
+			<div class="inner">
+				<div class="io-box"></div>
+				<div class="left">
+					<img src="imgs/h_zhuanye.png" alt="">
+					<div class="left-h6">
+						<h6>专业数据可视化</h6>
+						<p>非凡的数据洞悉和可视化能力精研数据,惊艳所见</p>
+					</div>					
+				</div>
+				<div class="right">
+					<img src="imgs/stat.png" alt="">
+				</div>
+				<div class="aa"><a href="">© 2014 Baidu使用百度前必读</a></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
